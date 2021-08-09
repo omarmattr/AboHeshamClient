@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+<variable
+    name="category"
+    type="com.ps.omarmattr.aboheshamclient.model.Category" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="@dimen/margin_8"
+        app:cardCornerRadius="@dimen/radius_4"
+        app:cardElevation="@dimen/elevation_4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_card_120">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+
+    android:textSize="@dimen/font_16"
+    android:fontFamily="@font/tajawal_bold"
+    android:text="@{category.name}"/>
+
+    </androidx.cardview.widget.CardView>
+</layout>

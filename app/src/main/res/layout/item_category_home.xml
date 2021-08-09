@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+    <variable
+        name="category"
+        type="com.ps.omarmattr.aboheshamclient.model.Category" />
+    </data>
+
+    <RadioButton
+        android:id="@+id/tvRadioBtn"
+        android:layout_width="110dp"
+        android:layout_height="56dp"
+        android:layout_margin="2sp"
+        android:background="@drawable/stroke_radio_shape"
+        android:button="@android:color/transparent"
+        android:text="@{category.name}"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:fontFamily="@font/tajawal_medium"
+        android:textColor="#8B8B8B"/>
+
+</layout>

@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name_en">AboHashem</string>
+    <string name="app_name">نور الهدى للكمبيوتر</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_picture">اضافة الصور</string>
+    <string name="home">الصفحة الرئيسية </string>
+    <string name="add_product">إضافة منتج جديد </string>
+    <string name="update_product">تعديل المنتج</string>
+    <string name="product_name">اسم المنتج</string>
+    <string name="product_details">تفاصيل المنتج</string>
+    <string name="old_price">السعر القديم</string>
+    <string name="price">السعر</string>
+    <string name="add">اضافة</string>
+    <string name="quantity">الكمية</string>
+    <string name="fieldRequired">هذا الحقل مطلوب</string>
+    <string name="sent_notify">ارسال اشعار</string>
+    <string name="category">الفئات</string>
+    <string name="location">المكان</string>
+    <string name="phone">رقم الهاتف</string>
+    <string name="save">حفظ</string>
+    <string name="add_category">اضافة فئة جديدة</string>
+    <string name="update_category">تعديل الفئة</string>
+    <string name="category_name">اسم الفئة</string>
+    <string name="delete">حدف</string>
+    <string name="profile">الاعدادات</string>
+    <string name="search">البحث</string>
+    <string name="main_channel">Notification Channel</string>
+    <string name="done">تم</string>
+    <string name="conacte">تواصل الان</string>
+    <string name="sold">متبقي</string>
+    <string name="more">الخيارات</string>
+    <string name="logout_notes">انت تستخدم نسخة قديمة من التطبيق يجب عليك تحديث التطبيق لاخر إصدار</string>
+    <string name="exit">خروج</string>
+    <string name="ticket_now">اطلب الان</string>
+    <string name="_0">0</string>
+    <string name="welcome">اهلا وسهلا بك</string>
+    <string name="name">الاسم او اسم الشبكة</string>
+    <string name="login">الدخول</string>
+    <string name="phone_error">رقم الهاتف غير صحيح</string>
+    <string name="ticket">طلباتي</string>
+    <string name="favourite">المفضلة</string>
+
+</resources>
