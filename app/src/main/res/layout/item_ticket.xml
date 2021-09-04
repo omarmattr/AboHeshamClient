@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="ticket"
+            type="com.ps.omarmattr.abohesham.client.model.Ticket" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/radius_8"
+        android:layout_margin="@dimen/margin_8"
+        app:cardElevation="@dimen/elevation_4"
+        app:strokeColor="@color/border"
+        app:strokeWidth="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_margin="@dimen/margin_8"
+                android:id="@+id/tvProduct"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/tajawal_bold"
+                android:maxLines="1"
+                android:text="@{ticket.productName}"
+                android:textAlignment="viewStart"
+                android:textColor="@color/header"
+                android:textSize="@dimen/font_14"
+                app:layout_constraintEnd_toStartOf="@+id/btnDelete"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="1254689" />
+
+            <TextView
+                android:id="@+id/tvQuantity"
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:layout_marginVertical="@dimen/margin_8"
+                android:ellipsize="end"
+                android:fontFamily="@font/tajawal_light"
+                android:maxLines="1"
+                android:text="@{String.valueOf(ticket.quantity)}"
+                android:textAlignment="viewStart"
+                android:textColor="@color/header"
+                android:textSize="@dimen/font_14"
+                app:layout_constraintEnd_toEndOf="@+id/tvProduct"
+                app:layout_constraintStart_toEndOf="@+id/textView11"
+                app:layout_constraintTop_toBottomOf="@+id/tvProduct"
+                tools:text="1254689" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:layout_marginVertical="@dimen/margin_8"
+                android:ellipsize="end"
+                android:fontFamily="@font/tajawal_light"
+                android:maxLines="1"
+                format_date="@{ticket.date}"
+                android:textAlignment="viewStart"
+                android:textColor="@color/header"
+                android:textSize="@dimen/font_14"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tvProduct"
+                app:layout_constraintStart_toEndOf="@+id/textView11"
+                app:layout_constraintTop_toBottomOf="@+id/tvQuantity"
+                tools:text="1254689" />
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="0dp"
+                android:layout_margin="@dimen/margin_8"
+
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/margin_8"
+                android:ellipsize="end"
+                android:fontFamily="@font/tajawal_light"
+                android:maxLines="1"
+                android:text="@string/quantity"
+                android:textAlignment="viewStart"
+                android:textColor="@color/header"
+                android:textSize="@dimen/font_14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvProduct"
+                tools:text="الكمية"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/margin_8"
+                android:ellipsize="end"
+                android:fontFamily="@font/tajawal_light"
+                android:maxLines="1"
+                android:text="@string/date"
+                android:layout_margin="@dimen/margin_8"
+                android:textAlignment="viewStart"
+                android:textColor="@color/header"
+                android:textSize="@dimen/font_14"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11"
+                />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDelete"
+                android:layout_width="@dimen/size_card_100"
+                android:layout_height="@dimen/size_56dp"
+                android:layout_margin="@dimen/margin_16"
+                android:text="@string/delete"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

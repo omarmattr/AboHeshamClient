@@ -3,14 +3,14 @@
     package="com.ps.omarmattr.aboheshamclient" >
 
     <application
-        android:name="com.ps.omarmattr.abohesham.util.BaseApplication"
+        android:name="com.ps.omarmattr.abohesham.client.util.BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Abohesham" >
-        <activity android:name=".ui.MainActivity" >
+        <activity android:name="com.ps.omarmattr.abohesham.client.ui.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,7 +18,7 @@
             </intent-filter>
         </activity>
         <service
-            android:name=".service.NotificationServiceFirebase"
+            android:name="com.ps.omarmattr.abohesham.client.service.NotificationServiceFirebase"
             android:exported="false"
             android:permission="com.google.android.c2dm.permission.SEND">
             <intent-filter>

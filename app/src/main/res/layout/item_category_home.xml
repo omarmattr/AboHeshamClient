@@ -6,7 +6,7 @@
     <data>
     <variable
         name="category"
-        type="com.ps.omarmattr.aboheshamclient.model.Category" />
+        type="com.ps.omarmattr.abohesham.client.model.Category" />
     </data>
 
     <RadioButton

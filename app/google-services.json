@@ -36,6 +36,35 @@
     },
     {
       "client_info": {
+        "mobilesdk_app_id": "1:133629483006:android:fc6cf26d977c510b6492af",
+        "android_client_info": {
+          "package_name": "com.ps.omarmattr.abohesham.client"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "133629483006-e78nkicn5ecshptooc5nrigphruet32m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2BG5nXt8Y6Fo0KJIQ4URn8nux9ZRrAy4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "133629483006-e78nkicn5ecshptooc5nrigphruet32m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:133629483006:android:de9fc13a5bf0e4296492af",
         "android_client_info": {
           "package_name": "com.ps.omarmattr.aboheshamclient"

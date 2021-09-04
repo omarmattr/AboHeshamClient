@@ -7,7 +7,7 @@
 
         <variable
             name="product"
-            type="com.ps.omarmattr.aboheshamclient.model.Product" />
+            type="com.ps.omarmattr.abohesham.client.model.Product" />
 
     </data>
 
@@ -19,7 +19,7 @@
         tools:context=".ui.fragment.MealDetailsFragment">
 
         <include
-            android:id="@+id/toolbar"
+            android:id="@+id/toolbar_layout"
             layout="@layout/toolbar_layout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -95,6 +95,15 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/mealName"
                     tools:text="123" />
+
+                <ImageView
+                    android:id="@+id/imageLove"
+                    android:layout_width="@dimen/size_24dp"
+                    android:layout_height="@dimen/size_24dp"
+                    android:src="@drawable/ic_heart"
+                    app:layout_constraintBottom_toBottomOf="@+id/mealName"
+                    app:layout_constraintEnd_toEndOf="@+id/price"
+                    app:layout_constraintTop_toTopOf="@+id/mealName" />
 
                 <TextView
                     android:id="@+id/oldPrice"

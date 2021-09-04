@@ -7,7 +7,7 @@
 
         <variable
             name="product"
-            type="com.ps.omarmattr.aboheshamclient.model.Product" />
+            type="com.ps.omarmattr.abohesham.client.model.Product" />
     </data>
 
     <com.google.android.material.card.MaterialCardView

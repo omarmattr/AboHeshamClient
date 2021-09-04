@@ -34,10 +34,15 @@
     <string name="ticket_now">اطلب الان</string>
     <string name="_0">0</string>
     <string name="welcome">اهلا وسهلا بك</string>
-    <string name="name">الاسم او اسم الشبكة</string>
+    <string name="name">الاسم </string>
+    <string name="name_network">اسم الشبكة </string>
+    <string name="do_you_have_network">هل انت صاحب شبكة ؟</string>
     <string name="login">الدخول</string>
     <string name="phone_error">رقم الهاتف غير صحيح</string>
     <string name="ticket">طلباتي</string>
     <string name="favourite">المفضلة</string>
+    <string name="date">الوقت</string>
+    <string name="notes_delete_ticket">هل انت متأكد من انط تود هذف هذا الطلب ؟</string>
+    <string name="like">المفضلة</string>
 
 </resources>

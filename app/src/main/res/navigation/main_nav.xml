@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/splashFragment"
         tools:layout="@layout/fragment_splash"
-        android:name="com.ps.omarmattr.aboheshamclient.ui.fragment.SplashFragment"
+        android:name="com.ps.omarmattr.abohesham.client.ui.fragment.SplashFragment"
         android:label="SplashFragment" >
         <action
             android:id="@+id/action_splashFragment_to_loginFragment"
@@ -17,7 +17,7 @@
     <fragment
         android:id="@+id/navigationHome"
         tools:layout="@layout/fragment_home"
-        android:name="com.ps.omarmattr.aboheshamclient.ui.fragment.HomeFragment"
+        android:name="com.ps.omarmattr.abohesham.client.ui.fragment.HomeFragment"
         android:label="HomeFragment" >
         <action
             android:id="@+id/action_homeFragment_to_categoryFragment"
@@ -26,12 +26,12 @@
     <fragment
         android:id="@+id/categoryDetailsFragment"
         tools:layout="@layout/fragment_category_details"
-        android:name="com.ps.omarmattr.aboheshamclient.ui.fragment.CategoryDetailsFragment"
+        android:name="com.ps.omarmattr.abohesham.client.ui.fragment.CategoryDetailsFragment"
         android:label="CategoryDetailsFragment" />
     <fragment
         android:id="@+id/categoryFragment"
         tools:layout="@layout/fragment_category"
-        android:name="com.ps.omarmattr.aboheshamclient.ui.fragment.CategoryFragment"
+        android:name="com.ps.omarmattr.abohesham.client.ui.fragment.CategoryFragment"
         android:label="CategoryFragment" >
         <action
             android:id="@+id/action_categoryFragment_to_categoryDetailsFragment"
@@ -40,19 +40,24 @@
     <fragment
         android:id="@+id/detailsFragment"
         tools:layout="@layout/product_details_fragment"
-        android:name="com.ps.omarmattr.aboheshamclient.ui.fragment.DetailsFragment"
+        android:name="com.ps.omarmattr.abohesham.client.ui.fragment.DetailsFragment"
         android:label="DetailsDialog" />
     <fragment
         android:id="@+id/loginFragment"
         tools:layout="@layout/fragment_login"
-        android:name="com.ps.omarmattr.aboheshamclient.ui.fragment.LoginFragment"
+        android:name="com.ps.omarmattr.abohesham.client.ui.fragment.LoginFragment"
         android:label="LoginFragment" />
     <action android:id="@+id/goToHome" app:destination="@id/navigationHome"/>
     <action android:id="@+id/goToDetails" app:destination="@id/detailsFragment"/>
     <fragment
         android:id="@+id/navigationTicket"
         tools:layout="@layout/fragment_ticket"
-        android:name="com.ps.omarmattr.aboheshamclient.ui.fragment.TicketFragment"
+        android:name="com.ps.omarmattr.abohesham.client.ui.fragment.TicketFragment"
         android:label="TicketFragment" />
+    <fragment
+        android:id="@+id/navigationFavourite"
+        tools:layout="@layout/fragment_like"
+        android:name="com.ps.omarmattr.abohesham.client.ui.fragment.LikeFragment"
+        android:label="LikeFragment" />
 
 </navigation>

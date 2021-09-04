@@ -3,18 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/OMEN/AndroidStudioProjects/AboHeshamClient/app/src/main/res/drawable/bottom_navigation_color_selector.xml" value="0.22777777777777777" />
-        <entry key="..\:/Users/OMEN/AndroidStudioProjects/AboHeshamClient/app/src/main/res/layout/activity_main.xml" value="0.18518518518518517" />
-        <entry key="..\:/Users/OMEN/AndroidStudioProjects/AboHeshamClient/app/src/main/res/layout/dialog_logout.xml" value="0.18518518518518517" />
-        <entry key="..\:/Users/OMEN/AndroidStudioProjects/AboHeshamClient/app/src/main/res/layout/fragment_add_teckit.xml" value="0.2557291666666667" />
-        <entry key="..\:/Users/OMEN/AndroidStudioProjects/AboHeshamClient/app/src/main/res/layout/fragment_category.xml" value="0.18518518518518517" />
-        <entry key="..\:/Users/OMEN/AndroidStudioProjects/AboHeshamClient/app/src/main/res/layout/fragment_category_details.xml" value="0.18518518518518517" />
-        <entry key="..\:/Users/OMEN/AndroidStudioProjects/AboHeshamClient/app/src/main/res/layout/fragment_home.xml" value="0.18518518518518517" />
-        <entry key="..\:/Users/OMEN/AndroidStudioProjects/AboHeshamClient/app/src/main/res/layout/fragment_login.xml" value="0.2557291666666667" />
-        <entry key="..\:/Users/OMEN/AndroidStudioProjects/AboHeshamClient/app/src/main/res/layout/fragment_ticket.xml" value="0.2557291666666667" />
-        <entry key="..\:/Users/OMEN/AndroidStudioProjects/AboHeshamClient/app/src/main/res/layout/product_details_fragment.xml" value="0.264" />
-        <entry key="..\:/Users/OMEN/AndroidStudioProjects/AboHeshamClient/app/src/main/res/layout/toolbar_layout.xml" value="0.18518518518518517" />
-        <entry key="..\:/Users/OMEN/AndroidStudioProjects/AboHeshamClient/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.2557291666666667" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.15" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.15" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/layout/dialog_details.xml" value="0.13385416666666666" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/layout/fragment_ticket.xml" value="0.2553846153846154" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/layout/item_category.xml" value="0.259375" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/layout/item_category_home.xml" value="0.259375" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/layout/item_meal_image.xml" value="0.259375" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/layout/item_product.xml" value="0.2553846153846154" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/layout/item_ticket.xml" value="0.2553846153846154" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/layout/product_details_fragment.xml" value="0.2553846153846154" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/layout/toolbar_layout.xml" value="0.2553846153846154" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.15" />
       </map>
     </option>
   </component>
