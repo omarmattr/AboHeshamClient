@@ -9,7 +9,7 @@ import androidx.fragment.app.DialogFragment
 import com.ps.omarmattr.abohesham.client.model.Profile
 import com.ps.omarmattr.abohesham.client.ui.viewmodel.HomeViewModel
 import com.ps.omarmattr.abohesham.client.util.Result
-import com.ps.omarmattr.aboheshamclient.databinding.DialogDetailsBinding
+import com.ps.omarmattr.abohesham.client.databinding.DialogDetailsBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 

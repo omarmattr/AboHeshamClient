@@ -15,8 +15,8 @@ import com.ps.omarmattr.abohesham.client.other.PRODUCT_TYPE
 import com.ps.omarmattr.abohesham.client.ui.dialog.LogOutDialog
 import com.ps.omarmattr.abohesham.client.ui.viewmodel.HomeViewModel
 import com.ps.omarmattr.abohesham.client.util.Result
-import com.ps.omarmattr.aboheshamclient.R
-import com.ps.omarmattr.aboheshamclient.databinding.FragmentSplashBinding
+import com.ps.omarmattr.abohesham.client.R
+import com.ps.omarmattr.abohesham.client.databinding.FragmentSplashBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

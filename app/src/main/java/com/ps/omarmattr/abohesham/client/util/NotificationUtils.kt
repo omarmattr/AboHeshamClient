@@ -3,8 +3,6 @@ package com.ps.omarmattr.abohesham.client.util
 import android.app.*
 import android.content.Context
 import android.content.Intent
-import android.media.AudioAttributes
-import android.net.Uri
 import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
@@ -12,7 +10,7 @@ import androidx.core.app.NotificationManagerCompat
 import com.ps.omarmattr.abohesham.client.model.Product
 import com.ps.omarmattr.abohesham.client.other.PRODUCT_TYPE
 import com.ps.omarmattr.abohesham.client.ui.MainActivity
-import com.ps.omarmattr.aboheshamclient.R
+import com.ps.omarmattr.abohesham.client.R
 
 object NotificationUtils {
 

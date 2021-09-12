@@ -11,11 +11,11 @@ import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.google.firebase.messaging.FirebaseMessaging
-import com.ps.omarmattr.aboheshamclient.R
+import com.ps.omarmattr.abohesham.client.R
 import com.ps.omarmattr.abohesham.client.model.Product
 import com.ps.omarmattr.abohesham.client.other.PRODUCT_TYPE
 import com.ps.omarmattr.abohesham.client.other.setLanguage
-import com.ps.omarmattr.aboheshamclient.databinding.ActivityMainBinding
+import com.ps.omarmattr.abohesham.client.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.google.gson.Gson
+import com.ps.omarmattr.abohesham.client.BR
 import com.ps.omarmattr.abohesham.client.adapter.GenericAdapter
 import com.ps.omarmattr.abohesham.client.model.Ticket
 import com.ps.omarmattr.abohesham.client.model.User
@@ -16,9 +17,8 @@ import com.ps.omarmattr.abohesham.client.ui.dialog.LoadingDialog
 import com.ps.omarmattr.abohesham.client.ui.dialog.TicketDialog
 import com.ps.omarmattr.abohesham.client.ui.viewmodel.TicketViewModel
 import com.ps.omarmattr.abohesham.client.util.Result
-import com.ps.omarmattr.aboheshamclient.BR
-import com.ps.omarmattr.aboheshamclient.R
-import com.ps.omarmattr.aboheshamclient.databinding.FragmentTicketBinding
+import com.ps.omarmattr.abohesham.client.R
+import com.ps.omarmattr.abohesham.client.databinding.FragmentTicketBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 

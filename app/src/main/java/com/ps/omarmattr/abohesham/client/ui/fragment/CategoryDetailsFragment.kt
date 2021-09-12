@@ -14,9 +14,9 @@ import com.ps.omarmattr.abohesham.client.other.setToolbarView
 import com.ps.omarmattr.abohesham.client.ui.dialog.LoadingDialog
 import com.ps.omarmattr.abohesham.client.ui.viewmodel.HomeViewModel
 import com.ps.omarmattr.abohesham.client.util.Result
-import com.ps.omarmattr.aboheshamclient.BR
-import com.ps.omarmattr.aboheshamclient.R
-import com.ps.omarmattr.aboheshamclient.databinding.FragmentCategoryDetailsBinding
+import com.ps.omarmattr.abohesham.client.BR
+import com.ps.omarmattr.abohesham.client.R
+import com.ps.omarmattr.abohesham.client.databinding.FragmentCategoryDetailsBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 

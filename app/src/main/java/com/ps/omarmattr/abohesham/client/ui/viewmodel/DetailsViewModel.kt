@@ -8,11 +8,7 @@ import com.google.firebase.analytics.ktx.logEvent
 import com.google.firebase.ktx.Firebase
 import com.ps.omarmattr.abohesham.client.model.Product
 import com.ps.omarmattr.abohesham.client.model.Ticket
-import com.ps.omarmattr.abohesham.client.model.User
 import com.ps.omarmattr.abohesham.client.repository.DetailsRepository
-import com.ps.omarmattr.abohesham.client.repository.HomeRepository
-import com.ps.omarmattr.abohesham.client.repository.LoginRepository
-import com.ps.omarmattr.abohesham.client.repository.TicketRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

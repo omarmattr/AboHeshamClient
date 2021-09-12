@@ -9,7 +9,7 @@ import androidx.fragment.app.DialogFragment
 import com.ps.omarmattr.abohesham.client.other.PRODUCT_ID
 import com.ps.omarmattr.abohesham.client.ui.viewmodel.TicketViewModel
 import com.ps.omarmattr.abohesham.client.util.Result
-import com.ps.omarmattr.aboheshamclient.databinding.DialogTicketBinding
+import com.ps.omarmattr.abohesham.client.databinding.DialogTicketBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 

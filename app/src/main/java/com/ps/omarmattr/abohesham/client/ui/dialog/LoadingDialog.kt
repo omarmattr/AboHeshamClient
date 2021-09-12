@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
-import com.ps.omarmattr.aboheshamclient.databinding.DialogLoadingBinding
+import com.ps.omarmattr.abohesham.client.databinding.DialogLoadingBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

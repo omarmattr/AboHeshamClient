@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.gson.Gson
+import com.ps.omarmattr.abohesham.client.BR
 import com.ps.omarmattr.abohesham.client.adapter.GenericAdapter
 import com.ps.omarmattr.abohesham.client.model.Product
 import com.ps.omarmattr.abohesham.client.model.Ticket
@@ -17,9 +18,8 @@ import com.ps.omarmattr.abohesham.client.model.User
 import com.ps.omarmattr.abohesham.client.other.*
 import com.ps.omarmattr.abohesham.client.ui.viewmodel.DetailsViewModel
 import com.ps.omarmattr.abohesham.client.util.Result
-import com.ps.omarmattr.aboheshamclient.BR
-import com.ps.omarmattr.aboheshamclient.R
-import com.ps.omarmattr.aboheshamclient.databinding.ProductDetailsFragmentBinding
+import com.ps.omarmattr.abohesham.client.R
+import com.ps.omarmattr.abohesham.client.databinding.ProductDetailsFragmentBinding
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.*
 import javax.inject.Inject

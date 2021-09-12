@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import androidx.fragment.app.DialogFragment
-import com.ps.omarmattr.aboheshamclient.databinding.DialogLogoutBinding
+import com.ps.omarmattr.abohesham.client.databinding.DialogLogoutBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

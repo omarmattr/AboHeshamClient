@@ -20,8 +20,8 @@ import com.ps.omarmattr.abohesham.client.ui.viewmodel.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 import com.ps.omarmattr.abohesham.client.util.Result
-import com.ps.omarmattr.aboheshamclient.R
-import com.ps.omarmattr.aboheshamclient.databinding.FragmentLoginBinding
+import com.ps.omarmattr.abohesham.client.R
+import com.ps.omarmattr.abohesham.client.databinding.FragmentLoginBinding
 
 @AndroidEntryPoint
 class LoginFragment : Fragment() {

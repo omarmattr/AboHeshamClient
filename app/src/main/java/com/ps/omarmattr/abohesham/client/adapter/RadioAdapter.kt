@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
 import androidx.recyclerview.widget.RecyclerView
+import com.ps.omarmattr.abohesham.client.R
 import com.ps.omarmattr.abohesham.client.model.Category
-import com.ps.omarmattr.aboheshamclient.R
 import kotlinx.android.synthetic.main.item_category_home.view.*
 
 class RadioAdapter (
