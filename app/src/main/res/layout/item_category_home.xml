@@ -20,6 +20,6 @@
         android:textAlignment="center"
         android:textSize="12sp"
         android:fontFamily="@font/tajawal_medium"
-        android:textColor="#8B8B8B"/>
+        android:textColor="@color/subtext"/>
 
 </layout>

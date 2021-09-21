@@ -4,9 +4,35 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.15" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/drawable/bottom_navigation_color_selector.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/drawable/ic_add.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/drawable/ic_add_circle.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/drawable/ic_app_bar.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/drawable/ic_arrow_back.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/drawable/ic_baseline_close.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/drawable/ic_bk.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/drawable/ic_close.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/drawable/ic_down_arrow.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/drawable/ic_file_earmark_plus.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/drawable/ic_heart.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/drawable/ic_heart_red.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/drawable/ic_home.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2351851851851852" />
         <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.15" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/drawable/ic_menu.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/drawable/ic_more.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/drawable/ic_order.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/drawable/ic_profile_user.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/drawable/ic_remove.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/drawable/ic_search.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/drawable/ic_sheke.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/drawable/stroke_notchecked_shape.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/drawable/stroke_radio_shape.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/drawable/toolbal_bg.xml" value="0.2351851851851852" />
         <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/layout/dialog_details.xml" value="0.13385416666666666" />
         <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/layout/fragment_category_details.xml" value="0.13385416666666666" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/layout/fragment_home.xml" value="0.1925925925925926" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/layout/fragment_like.xml" value="0.2553846153846154" />
         <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/layout/fragment_ticket.xml" value="0.2553846153846154" />
         <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/layout/item_category.xml" value="0.259375" />
         <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/layout/item_category_home.xml" value="0.259375" />
@@ -14,7 +40,7 @@
         <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/layout/item_product.xml" value="0.2553846153846154" />
         <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/layout/item_ticket.xml" value="0.2553846153846154" />
         <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/layout/product_details_fragment.xml" value="0.2553846153846154" />
-        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/layout/toolbar_layout.xml" value="0.2553846153846154" />
+        <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/layout/toolbar_layout.xml" value="0.2" />
         <entry key="..\:/Users/OMEN/AndroidStudioProjects/client/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.15" />
       </map>
     </option>

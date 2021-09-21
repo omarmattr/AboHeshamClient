@@ -11,7 +11,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
-        app:elevation="0dp">
+        app:elevation="0dp"
+        android:layout_margin="0dp"
+        android:contentInsetLeft="0dp"
+        android:contentInsetStart="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:contentInsetRight="0dp"
+        android:contentInsetEnd="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetEnd="0dp">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -20,22 +29,30 @@
             android:contentInsetStart="0dp"
             android:contentInsetLeft="0dp"
             android:gravity="center"
+            android:layout_margin="0dp"
             app:contentInsetLeft="0dp"
             app:contentInsetStart="0dp"
-            app:layout_scrollFlags="scroll|enterAlways">
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:contentInsetRight="0dp"
+            android:contentInsetEnd="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetEnd="0dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:background="@drawable/toolbal_bg"
                 android:layout_height="wrap_content">
 
                 <ImageView
                     android:id="@+id/imageView"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/ic_toolbar_background"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -43,7 +60,7 @@
                     android:id="@+id/btnBack"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginStart="@dimen/margin_16"
                     android:background="@drawable/shape_circle"
                     android:elevation="6dp"
                     android:src="@drawable/ic_arrow_back"
