@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import com.google.gson.Gson
 import com.ps.omarmattr.abohesham.client.BR
@@ -68,6 +69,15 @@ class TicketFragment : Fragment(), GenericAdapter.OnListItemViewClickListener<Ti
         viewModel.getTicketLiveData.observe(viewLifecycleOwner) {
             when (it.status) {
                 Result.Status.EMPTY -> {
+                    mBinding.linearEmpty.isVisible = true
+                    mBinding.rcTicket.isVisible = false
+                    if (loading != null) {
+                        try {
+                            loadingDialog.dismiss()
+                        } catch (e: Exception) {
+                        }
+
+                    }
                 }
                 Result.Status.ERROR -> {
                     loadingDialog.dismiss()
@@ -78,6 +88,8 @@ class TicketFragment : Fragment(), GenericAdapter.OnListItemViewClickListener<Ti
                         loadingDialog.show(requireActivity().supportFragmentManager, "")
                 }
                 Result.Status.SUCCESS -> {
+                    mBinding.rcTicket.isVisible = true
+                    mBinding.linearEmpty.isVisible = false
                     if (loading != null) {
                         try {
                             loadingDialog.dismiss()

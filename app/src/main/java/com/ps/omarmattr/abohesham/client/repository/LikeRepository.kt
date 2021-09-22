@@ -30,7 +30,12 @@ class LikeRepository @Inject constructor() {
                     value!!.forEach {
                         array.add(it.toObject(Product::class.java))
                     }
-                    likeLiveData.postValue(Result.success(array))
+                    if(array.isEmpty()){
+                        likeLiveData.postValue(Result.empty(""))
+                    }else{
+                        likeLiveData.postValue(Result.success(array))
+
+                    }
                 } else {
                     likeLiveData.postValue(Result.error(error.message, ""))
                 }

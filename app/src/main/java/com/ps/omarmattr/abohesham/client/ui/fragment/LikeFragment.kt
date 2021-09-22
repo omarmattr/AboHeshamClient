@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.google.gson.Gson
@@ -73,6 +74,15 @@ class LikeFragment : Fragment(), GenericAdapter.OnListItemViewClickListener<Prod
         viewModel.getLikeLiveData.observe(viewLifecycleOwner) {
             when (it.status) {
                 Result.Status.EMPTY -> {
+                    mBinding.linearEmpty.isVisible = true
+                    mBinding.rcProduct.isVisible = false
+                    if (loading != null) {
+                        try {
+                            loadingDialog.dismiss()
+                        } catch (e: Exception) {
+                        }
+
+                    }
                 }
                 Result.Status.ERROR -> {
                     loadingDialog.dismiss()
@@ -83,6 +93,8 @@ class LikeFragment : Fragment(), GenericAdapter.OnListItemViewClickListener<Prod
                         loadingDialog.show(requireActivity().supportFragmentManager, "")
                 }
                 Result.Status.SUCCESS -> {
+                    mBinding.rcProduct.isVisible = true
+                    mBinding.linearEmpty.isVisible = false
                     if (loading != null) {
                         try {
                             loadingDialog.dismiss()

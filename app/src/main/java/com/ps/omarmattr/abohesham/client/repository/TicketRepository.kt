@@ -25,8 +25,11 @@ class TicketRepository @Inject constructor() {
                 for (i in value!!.documents){
                     arrayList.add(i.toObject(Ticket::class.java)!!)
                 }
-                ticketLiveData.postValue(Result.success(arrayList))
-
+                if (arrayList.isEmpty()){
+                    ticketLiveData.postValue(Result.empty(""))
+                }else{
+                    ticketLiveData.postValue(Result.success(arrayList))
+                }
             }else{
                 ticketLiveData.postValue(Result.error(error.message, ""))
 
