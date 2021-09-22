@@ -57,7 +57,6 @@ class LoginFragment : Fragment() {
 
     private fun signUp() {
         loadingDialog = LoadingDialog()
-
         val name = mBinding.txtName
         val phone = mBinding.txtPhone
         val networkName = mBinding.txtNameNet
@@ -83,14 +82,12 @@ class LoginFragment : Fragment() {
                 )
                 return
             }
-            mBinding.checkBox.isChecked -> {
-                if (networkName.editText!!.text.isEmpty()) {
+            mBinding.checkBox.isChecked && networkName.editText!!.text.isEmpty()-> {
                     onChickData(
                         networkName.editText!!,
                         requireActivity().getString(R.string.fieldRequired)
                     )
                     return
-                }
             }
 
             else -> {

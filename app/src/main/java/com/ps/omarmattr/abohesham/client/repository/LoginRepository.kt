@@ -22,7 +22,15 @@ class LoginRepository @Inject constructor() {
             .addSnapshotListener { value, error ->
                 if (error == null) {
                     if (value!!.documents.isNotEmpty()) {
-                        loginLiveData.postValue(Result.success(""))
+                        user.id = value.documents.first().id
+                        db.collection(COLLECTION_USER).document(user.id).set(user).addOnSuccessListener {
+                            loginLiveData.postValue(Result.success(""))
+
+                        }.addOnFailureListener {
+                            loginLiveData.postValue(Result.error(it.message, ""))
+
+
+                        }
                     } else {
                         db.collection(COLLECTION_USER).document(user.id).set(user).addOnSuccessListener {
                             loginLiveData.postValue(Result.success(""))
