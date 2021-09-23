@@ -10,6 +10,7 @@
     // main color
     <color name="yellow">#EE3D48</color>
     <color name="red_100">#FF5722</color>
+    <color name="blue_100">#2196F3</color>
     <color name="Light_yellow">#FF6A61</color>
     <color name="header">#434340</color>
     <color name="subtext">#949494</color>

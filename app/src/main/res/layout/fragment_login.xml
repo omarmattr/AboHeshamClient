@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -50,8 +50,8 @@
         <TextView
             android:id="@+id/textView2"
             android:layout_width="0dp"
-            android:layout_margin="@dimen/margin_16"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_16"
             android:fontFamily="@font/tajawal_medium"
             android:text="@string/name"
             android:textColor="@color/header"
@@ -156,7 +156,6 @@
             app:layout_constraintTop_toTopOf="@+id/textView" />
 
         <TextView
-            android:visibility="gone"
             android:id="@+id/textView3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -165,17 +164,18 @@
             android:text="@string/name_network"
             android:textColor="@color/header"
             android:textSize="@dimen/font_18"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/checkBox" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:visibility="gone"
             android:id="@+id/txtNameNet"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="@dimen/size_56dp"
             android:textColorHint="@color/header"
+            android:visibility="gone"
             app:boxCornerRadiusBottomEnd="4dp"
             app:boxCornerRadiusBottomStart="4dp"
             app:boxCornerRadiusTopEnd="4dp"
@@ -198,6 +198,7 @@
                 android:textColorHint="@color/header"
                 android:textCursorDrawable="@drawable/shape_cursor" />
         </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSignUp"
             android:layout_width="0dp"
@@ -210,16 +211,32 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <com.facebook.login.widget.LoginButton
-            android:id="@+id/login_button"
-            android:layout_width="wrap_content"
+        <!--        <com.facebook.login.widget.LoginButton-->
+        <!--            android:id="@+id/login_button"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_gravity="center_horizontal"-->
+        <!--            app:layout_constraintBottom_toTopOf="@+id/btnSignUp"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/textView3" />-->
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/loginButton"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            app:layout_constraintBottom_toTopOf="@+id/btnSignUp"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/blue_100"
+            android:text="Login With Facebook"
+            android:textAllCaps="false"
+            app:icon="@drawable/ic_baseline_facebook"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

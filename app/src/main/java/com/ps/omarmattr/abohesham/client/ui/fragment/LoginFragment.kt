@@ -11,11 +11,14 @@ import android.widget.EditText
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.facebook.*
 import com.facebook.CallbackManager
 import com.facebook.FacebookCallback
 import com.facebook.FacebookException
 import com.facebook.FacebookSdk
 import com.facebook.login.LoginResult
+import com.google.firebase.auth.FacebookAuthProvider
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.gson.Gson
 import com.ps.omarmattr.abohesham.client.model.User
@@ -38,7 +41,7 @@ class LoginFragment : Fragment() {
     }
     private lateinit var loadingDialog: LoadingDialog
     private var loading: String? = null
-    lateinit var callbackManager: CallbackManager
+//    private lateinit var callbackManager: CallbackManager
 
     @Inject
     lateinit var viewModel: LoginViewModel
@@ -50,8 +53,8 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        FacebookSdk.sdkInitialize(requireContext())
-        callbackManager = CallbackManager.Factory.create()
+//        FacebookSdk.sdkInitialize(requireContext())
+//        callbackManager = CallbackManager.Factory.create()
         mBinding.btnSignUp.setOnClickListener {
             signUp()
         }
@@ -63,6 +66,49 @@ class LoginFragment : Fragment() {
                 mBinding.txtNameNet.isVisible = false
                 mBinding.textView3.isVisible = false
             }
+        }
+
+
+        callbackManager = CallbackManager.Factory.create();
+        mBinding.loginButton.setOnClickListener {
+            FacebookSdk.addLoggingBehavior(com.facebook.LoggingBehavior.REQUESTS);
+            com.facebook.login.LoginManager.getInstance().logInWithReadPermissions(
+                this, java.util.Arrays.asList("public_profile")
+            );
+
+            com.facebook.login.LoginManager.getInstance().registerCallback(callbackManager,
+                object : FacebookCallback<LoginResult?> {
+                    override fun onSuccess(loginResult: LoginResult?) {
+                        // App code
+                        val batch = com.facebook.GraphRequestBatch(
+                            com.facebook.GraphRequest.newMeRequest(
+                                loginResult!!.accessToken
+                            ) { jsonObject, response ->
+
+                                handleFacebookAccessToken(loginResult.accessToken) {
+//                                            viewModel.insertUsers(
+//                                                User(
+//                                                    com.google.firebase.auth.FirebaseAuth.getInstance().uid.toString(),
+//                                                    jsonObject.getString("name")
+//                                                )
+//                                            )
+//                                            findNavController().navigate(com.facebook.R.id.action_users_list_fragment)
+
+                                    Log.e("ttttttttthandleFaCallBack", jsonObject.toString())
+                                }
+                            },
+                            com.facebook.GraphRequest.newMyFriendsRequest(
+                                loginResult.accessToken
+                            ) { jsonArray, response -> }
+                        )
+
+                        batch.executeAsync()
+                    }
+
+                    override fun onCancel() = Unit
+
+                    override fun onError(exception: FacebookException) = Unit
+                })
         }
     }
 
@@ -114,24 +160,26 @@ class LoginFragment : Fragment() {
 
 //                viewModel.login(
 //                    user
-//                )
-                mBinding.loginButton.setReadPermissions("email")
-                mBinding.loginButton.registerCallback(
-                    callbackManager,
-                    object : FacebookCallback<LoginResult> {
-                        override fun onSuccess(loginResult: LoginResult) {
-                            Log.e(TAG, "facebook:onSuccess:$loginResult")
-                           // viewModel.handleFacebookAccessToken(loginResult.accessToken)
-                        }
+////                )
+//                mBinding.loginButton.setReadPermissions("email")
+//                mBinding.loginButton.registerCallback(
+//                    callbackManager,
+//                    object : FacebookCallback<LoginResult> {
+//                        override fun onSuccess(loginResult: LoginResult) {
+//                            Log.e(TAG, "facebook:onSuccess:$loginResult")
+//                           // viewModel.handleFacebookAccessToken(loginResult.accessToken)
+//                        }
+//
+//                        override fun onCancel() {
+//                            Log.e(TAG, "facebook:onCancel")
+//                        }
+//
+//                        override fun onError(error: FacebookException) {
+//                            Log.e(TAG, "facebook:onError", error)
+//                        }
+//                    })
 
-                        override fun onCancel() {
-                            Log.e(TAG, "facebook:onCancel")
-                        }
 
-                        override fun onError(error: FacebookException) {
-                            Log.e(TAG, "facebook:onError", error)
-                        }
-                    })
                 viewModel.getLoginLiveData.observe(viewLifecycleOwner) {
                     when (it.status) {
 
@@ -174,11 +222,27 @@ class LoginFragment : Fragment() {
     }
 
 
+    private var callbackManager: CallbackManager? = null
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        Log.e(TAG, "onActivityResult")
+        Log.e("ttttttttttt", "OnAcitivy")
+        callbackManager!!.onActivityResult(requestCode, resultCode, data)
+        super.onActivityResult(requestCode, resultCode, data)
 
-        callbackManager.onActivityResult(requestCode, resultCode, data)
+    }
 
+
+    private fun handleFacebookAccessToken(token: AccessToken, onComplete: () -> Unit) {
+        val credential = FacebookAuthProvider.getCredential(token.token)
+        FirebaseAuth.getInstance().signInWithCredential(credential)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    onComplete()
+                } else {
+
+                }
+
+            }
     }
 
     private fun onChickData(txt: EditText, message: String) {
