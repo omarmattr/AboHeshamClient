@@ -1,7 +1,9 @@
 package com.ps.omarmattr.abohesham.client.ui.fragment
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +11,11 @@ import android.widget.EditText
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.facebook.CallbackManager
+import com.facebook.FacebookCallback
+import com.facebook.FacebookException
+import com.facebook.FacebookSdk
+import com.facebook.login.LoginResult
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.gson.Gson
 import com.ps.omarmattr.abohesham.client.model.User
@@ -25,11 +32,13 @@ import com.ps.omarmattr.abohesham.client.databinding.FragmentLoginBinding
 
 @AndroidEntryPoint
 class LoginFragment : Fragment() {
+    private val TAG = "LoginFragment"
     private val mBinding by lazy {
         FragmentLoginBinding.inflate(layoutInflater)
     }
     private lateinit var loadingDialog: LoadingDialog
     private var loading: String? = null
+    lateinit var callbackManager: CallbackManager
 
     @Inject
     lateinit var viewModel: LoginViewModel
@@ -41,6 +50,8 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        FacebookSdk.sdkInitialize(requireContext())
+        callbackManager = CallbackManager.Factory.create()
         mBinding.btnSignUp.setOnClickListener {
             signUp()
         }
@@ -82,12 +93,12 @@ class LoginFragment : Fragment() {
                 )
                 return
             }
-            mBinding.checkBox.isChecked && networkName.editText!!.text.isEmpty()-> {
-                    onChickData(
-                        networkName.editText!!,
-                        requireActivity().getString(R.string.fieldRequired)
-                    )
-                    return
+            mBinding.checkBox.isChecked && networkName.editText!!.text.isEmpty() -> {
+                onChickData(
+                    networkName.editText!!,
+                    requireActivity().getString(R.string.fieldRequired)
+                )
+                return
             }
 
             else -> {
@@ -101,9 +112,26 @@ class LoginFragment : Fragment() {
                     networkName = mBinding.txtNameNet.editText!!.text.toString()
                 )
 
-                viewModel.login(
-                    user
-                )
+//                viewModel.login(
+//                    user
+//                )
+                mBinding.loginButton.setReadPermissions("email")
+                mBinding.loginButton.registerCallback(
+                    callbackManager,
+                    object : FacebookCallback<LoginResult> {
+                        override fun onSuccess(loginResult: LoginResult) {
+                            Log.e(TAG, "facebook:onSuccess:$loginResult")
+                           // viewModel.handleFacebookAccessToken(loginResult.accessToken)
+                        }
+
+                        override fun onCancel() {
+                            Log.e(TAG, "facebook:onCancel")
+                        }
+
+                        override fun onError(error: FacebookException) {
+                            Log.e(TAG, "facebook:onError", error)
+                        }
+                    })
                 viewModel.getLoginLiveData.observe(viewLifecycleOwner) {
                     when (it.status) {
 
@@ -143,6 +171,14 @@ class LoginFragment : Fragment() {
 
 
         }
+    }
+
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        Log.e(TAG, "onActivityResult")
+
+        callbackManager.onActivityResult(requestCode, resultCode, data)
+
     }
 
     private fun onChickData(txt: EditText, message: String) {

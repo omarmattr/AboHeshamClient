@@ -2,6 +2,9 @@ package com.ps.omarmattr.abohesham.client.ui.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
+import com.facebook.AccessToken
+import com.facebook.CallbackManager
+import com.facebook.login.widget.LoginButton
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.ktx.analytics
 import com.google.firebase.analytics.ktx.logEvent
@@ -19,6 +22,7 @@ class LoginViewModel @Inject constructor(
     private val repository: LoginRepository
 ) : AndroidViewModel(application) {
     fun login(user: User)= repository.login(user)
+    fun handleFacebookAccessToken(token: AccessToken) = repository.handleFacebookAccessToken(token)
     val getLoginLiveData get() =  repository.getLoginLiveData
 
 }
