@@ -58,6 +58,11 @@ class LoginFragment : Fragment() {
         mBinding.btnSignUp.setOnClickListener {
             signUp()
         }
+
+        if (FirebaseAuth.getInstance().currentUser?.uid != null) {
+            Log.e("ttttttttttUID", FirebaseAuth.getInstance().currentUser?.uid.toString())
+        }
+
         mBinding.checkBox.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
                 mBinding.txtNameNet.isVisible = true
@@ -80,26 +85,21 @@ class LoginFragment : Fragment() {
                 object : FacebookCallback<LoginResult?> {
                     override fun onSuccess(loginResult: LoginResult?) {
                         // App code
-                        val batch = com.facebook.GraphRequestBatch(
-                            com.facebook.GraphRequest.newMeRequest(
-                                loginResult!!.accessToken
-                            ) { jsonObject, response ->
+                        val batch = GraphRequestBatch(GraphRequest.newMeRequest(
+                            loginResult!!.accessToken
+                        ) { jsonObject, response ->
+//                                Log.e("ttttttttthandleFaCallBack", jsonObject.toString())
 
-                                handleFacebookAccessToken(loginResult.accessToken) {
-//                                            viewModel.insertUsers(
-//                                                User(
-//                                                    com.google.firebase.auth.FirebaseAuth.getInstance().uid.toString(),
-//                                                    jsonObject.getString("name")
-//                                                )
-//                                            )
-//                                            findNavController().navigate(com.facebook.R.id.action_users_list_fragment)
-
-                                    Log.e("ttttttttthandleFaCallBack", jsonObject.toString())
-                                }
-                            },
-                            com.facebook.GraphRequest.newMyFriendsRequest(
+                            handleFacebookAccessToken(loginResult.accessToken) {
+                                Log.e("ttttttttthandleFaCallBack", jsonObject.toString())
+                            }
+                        },
+                            GraphRequest.newMyFriendsRequest(
                                 loginResult.accessToken
-                            ) { jsonArray, response -> }
+                            ) { jsonArray, response ->
+
+                                Log.e("ttttttttttttt", jsonArray.toString())
+                            }
                         )
 
                         batch.executeAsync()
@@ -234,12 +234,13 @@ class LoginFragment : Fragment() {
 
     private fun handleFacebookAccessToken(token: AccessToken, onComplete: () -> Unit) {
         val credential = FacebookAuthProvider.getCredential(token.token)
+        Log.e("ttttthandleFacebookAccessToken", credential.provider.toString())
         FirebaseAuth.getInstance().signInWithCredential(credential)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     onComplete()
                 } else {
-
+                    task.exception?.printStackTrace()
                 }
 
             }

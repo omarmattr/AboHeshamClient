@@ -44,8 +44,9 @@
     <string name="date">الوقت</string>
     <string name="notes_delete_ticket">هل انت متأكد من انط تود هذف هذا الطلب ؟</string>
     <string name="like">المفضلة</string>
-    <string name="facebook_app_id">1241620989619223</string>
-    <string name="fb_login_protocol_scheme">fb1241620989619223</string>
+<!--    <string name="facebook_app_id">1241620989619223</string>-->
+<!--    <string name="fb_login_protocol_scheme">fb1241620989619223</string>-->
 
-
+    <string name="facebook_app_id">2757523621229762</string>
+    <string name="fb_login_protocol_scheme">fb2757523621229762</string>
 </resources>
